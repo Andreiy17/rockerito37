@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+       body {
+            margin: 0;
+            padding: 0;
+            background-image: url('../imagenes/nirvanafondo.png');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+h2 {
+    color: #333;
+}
+header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+.casa {
+            max-width: 50px;
+            height: auto;
+            margin: 0 20px;
+            text-align: center;
+        }
+
+    </style>
+    <title>Formulario de Sugerencias</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario de Sugerencia</h1>
+        <a href="../html/menu.html"><img src="../imagenes/casa.png" class="casa"></a>
+    </header>
+    <form action="sugerencias.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="sugerencia">Sugerencia:</label><br>
+        <textarea id="sugerencia" name="sugerencia" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Enviar Sugerencia">
+    </form>
+</body>
+</html>
+

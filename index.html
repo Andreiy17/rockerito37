@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('imagenes/fondo.png');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin: 0 0 20px;
+            font-family: georgia;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <img src="imagenes/logo.png"> <!-- Ruta actualizada -->
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="button" id="login-button">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <script>
+        function iniciarSesion() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'usuario' && password === 'contrasena') {
+                alert('Inicio de sesión exitoso');
+                window.location.href = 'html/menu.html'; /* Ruta actualizada */
+            } else {
+                alert('Credenciales incorrectas. Inténtalo de nuevo.');
+            }
+        }
+
+        document.getElementById('login-button').addEventListener('click', iniciarSesion);
+    </script>
+</body>
+</html>
